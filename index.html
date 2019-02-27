@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stulesheet" href="style.css">
+    <link rel="StyleSheet" href="./style/style.css">
 
     <meta name="theme-color" content="#F0DB4F">
 
@@ -62,13 +62,45 @@
             <li><a href="#">Downloads</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                
+            </li>
           </ul>
         </nav>
       </div>
 
+
+      <div id="id01" class="modal">  
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
+        <!-- <h1>Marketing stuff!</h1> -->
         <p class="lead">Cras justo odio, dapibus ac facilisis in, 
 egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor 
 mauris condimentum nibh, ut fermentum massa justo sit amet.</p>

@@ -21,7 +21,6 @@ self.addEventListener('install', e=>{
 
 self.addEventListener('activate', e => {
     const cacheWhitelist = [CACHE_NAME]
-
     e.waitUntil(
         caches.keys()
         .then(cachesNames => {
@@ -32,7 +31,6 @@ self.addEventListener('activate', e => {
             })
         })
         .then(() => self.clients.claim())
-
     )
 })
 
@@ -43,7 +41,6 @@ self.addEventListener('fetch', e=>{
             if(res){
                 return res
             }
-
             return fetch(e.request)
         })
     )
