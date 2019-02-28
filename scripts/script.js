@@ -19,8 +19,19 @@ function errorCallback() {}
 
 function successCallback(position) {
 
-    alert("Latitud: " + position.coords.latitude + "</br> Longitud: " + position.coords.longitude);
-    document.getElementById('coordenadas').Text = "Latitud: " + position.coords.latitude + "</br> Longitud: " + position.coords.longitude;
+    var output = document.getElementById('mapaGO');
+
+
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+    var img = new Image();
+    // img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+    output.appendChild(img);
+
 
 //   var mapUrl = "http://maps.google.com/maps/api/staticmap?center=";
 //   mapUrl = mapUrl + position.coords.latitude + ',' + position.coords.longitude;
