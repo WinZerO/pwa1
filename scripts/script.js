@@ -18,7 +18,8 @@ window.onload = function(event){
 function errorCallback() {}
 
 function successCallback(position) {
-        
+
+    alert("Latitud: " + position.coords.latitude + "</br> Longitud: " + position.coords.longitude);
     document.getElementById('coordenadas').Text = "Latitud: " + position.coords.latitude + "</br> Longitud: " + position.coords.longitude;
 
 //   var mapUrl = "http://maps.google.com/maps/api/staticmap?center=";
