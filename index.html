@@ -25,6 +25,11 @@
     <link rel="manifest" href="./manifest.json">
 
     <link rel="StyleSheet" href="./style/style.css">
+
+
+    <link rel="StyleSheet" href="./style/bootstrap.css">
+    <link rel="StyleSheet" href="./style/bootstrap-reboot.css">
+    <link rel="StyleSheet" href="./style/bootstrap-grid.css">
   </head>
 
   
@@ -33,37 +38,38 @@
    
     hola mundo
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Acceder</button>
+    <div class="container">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Acceder</button>
 
-    <div id="id01" class="modal">
-      
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <img src="./img/kali.png" alt="Avatar" class="avatar">
-        </div>
+      <div id="id01" class="modal">
+        
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="./img/kali.png" alt="Avatar" class="avatar">
+          </div>
 
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-            
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
 
+      </div>
     </div>
-
     <div>
       <div>
         Mi ubicacion es:
@@ -78,6 +84,9 @@
     <script src="./scripts/script.js"></script>
     <script src="./scripts/login.js"></script>
     <script src="./scripts/geoLocation.js"></script>
+
+    <script src="./scripts/bootstrap.js"></script>
+    <script src="./scripts/bootstrap.bundle.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
   </body>
