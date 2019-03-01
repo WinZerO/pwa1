@@ -8,7 +8,7 @@
         <meta name="description" content="descripcion para la primer pwa / login">
         <meta name="author" content="#JorgeGuli">
         <meta name="generator" content="Jekyll v3.8.5">
-        
+
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="descripcion para la primer pwa">
         <meta name="author" content="#JorgeGuli">
@@ -35,11 +35,11 @@
         <link href="./style/signin.css" rel="stylesheet">
     </head>
     <body class="text-center">
-        <form class="form-signin">
+        <form class="form-signin" action="#" method="POST">
             <img class="mb-4" src="./img/kali.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <label for="inputDocument" class="sr-only">Documento</label>
+            <input type="text" id="inputDocument" class="form-control" placeholder="Numero de Documento" required="" autofocus="">
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
             <div class="checkbox mb-3">
@@ -47,8 +47,14 @@
                 <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="login(event)">Sign in</button>
             <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
         </form>
+
+
+        <!-- Scripting area -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./scripts/script.js"></script>
+        <!-- <script src="./scripts/login.js"></script> -->
     </body>
 </html>
