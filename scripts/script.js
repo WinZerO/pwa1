@@ -42,8 +42,9 @@ function login(e) {
 
     $.ajax({
         type: "GET",
-        url: "https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente",
-        data: "{ tipodoc: DNI, nrodoc: '" + documento.value + "', fechahasta: 01-01-2017}",
+        // url: "https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente",
+        // data: "{ tipodoc: DNI, nrodoc: '" + documento.value + "', fechahasta: 01-01-2017}",
+        url: "https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente?tipodoc=DNI&nrodoc=31431483&fechahasta=01-07-2018",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
