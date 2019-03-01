@@ -24,52 +24,78 @@
 
     <link rel="manifest" href="./manifest.json">
 
-    <link rel="StyleSheet" href="./style/style.css">
+    <!-- <link rel="StyleSheet" href="./style/style.css"> -->
 
 
     <link rel="StyleSheet" href="./style/bootstrap.css">
     <link rel="StyleSheet" href="./style/bootstrap-reboot.css">
     <link rel="StyleSheet" href="./style/bootstrap-grid.css">
-    <link rel="StyleSheet" href="./style/signin.css">
+    <!-- <link rel="StyleSheet" href="./style/signin.css"> -->
   </head>
 
   
   
   <body>
    
-    hola mundo
+    <div class="container-fluid>">
+      <div class="row">
+    hola mundo</div>
+    </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Acceder</button>
     </div>
-    <div class="modal" id="id01">
-      <form class="form-signin">
-        <img class="mb-4" src="./img/kali.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+    <div class="wrapper fadeInDown" style="display:none" id="id01">
+        <div id="formContent">
+          
+      
+          
+          <div class="fadeIn first">
+            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+          </div>
+      
+          
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+          </form>
+      
+          
+          <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+          </div>
+      
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-      </form>
-    </div>
-    
-    <div class="container">
-      <div>
-        Mi ubicacion es:
+      </div> -->
+    <fomr>
+    <div class="row-text-center">
+    <div class="container-fluid-form">
+      <div class="row">
+        <div clas="col-xs-12">
+          Mi ubicacion.
+        </div>
       </div>
-      <div>
-        Latitud: <span id="lat"></span>
-        <br>
-        Logitud: <span id="long"></span>
+      <div clas="row">
+        <div clas:"col-xs-2">
+          Latitud: 
+        </div>
+        <div class="col-xs-10">
+          <span id="lat"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2">  
+          Logitud: 
+        </div>
+        <div class="col-xs-10">
+          <span id="long"></span>
+        </div>
       </div>
     </div>
+  </div>
+</fomr>
+    <!-- Scripting area -->
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/login.js"></script>
@@ -78,6 +104,8 @@
     <script src="./scripts/bootstrap.js"></script>
     <script src="./scripts/bootstrap.bundle.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="./scripts/jquery.js"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> -->
   </body>
 </html>
