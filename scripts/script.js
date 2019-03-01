@@ -42,7 +42,7 @@ function login(e) {
 
     $.ajax({
         type: "GET",
-        url: "https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarclienteextendido",
+        url: "https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente",
         data: "{ tipodoc: DNI, nrodoc: '" + documento.value + "', fechahasta: 01-01-2017}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
