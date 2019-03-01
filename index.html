@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="descripcion para la primer pwa">
-    <meta name="author" content="">
+    <meta name="author" content="#JorgeGuli">
     <link rel="icon" href="./img/kali.png">
 
     <title>PWA</title>
@@ -31,115 +32,125 @@
 
   <body>
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
         </div>
-      </nav>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
         
-      <div class="container-fluid text-center">    
-        <div class="row content">          
-          <div class="col-sm-8 text-left"> 
-            <h1>Bienvenidos al Sitio de Autogestión</h1>
-            <p>Esta es una prueba de concepto de cómo se comportaría el sitio convirtiéndolo en una PWA.</p>
-            <p>Estas son mis coordenadas.</p>
-                <p>Latitud: <span id="lat"></span></p>
-                <p>Logitud: <span id="long"></span></p>
-            <hr>
-            <h3>To do...</h3>
-            <ul class="list-group">
-                <li class="list-group-item">
-                  Funcionalidades<span class="badge">1</span>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <strike>Geolocalización</strike> <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
-                    </li>
-                    <li class="list-group-item">
-                        Solicitar grua <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                        Login <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                        ABM Usuario <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                        Descarga de documentacion <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                        Siniestros <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                      Telefonos Utiles   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                      Sucursales   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                      Cotizador   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                      Sucursales   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                    <li class="list-group-item">
-                      Push notifications  <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
-                    </li>
-                  </ul>
-                </li>
-                <li class="list-group-item">
-                    Diseño <span class="badge">2</span>
-                </li>
-                <li class="list-group-item">
-                    Migrar a Angular <span class="badge">3</span>
-                </li>
-              </ul>
+    <div class="container-fluid text-center">    
+      <div class="row content">          
+        <div class="col-sm-8 text-left"> 
+          <h1>Bienvenidos al Sitio de Autogestión</h1>
+          <p>Esta es una prueba de concepto de cómo se comportaría el sitio convirtiéndolo en una PWA.</p>
+          <p>Estas son mis coordenadas.</p>
+              <p>Latitud: <span id="lat"></span></p>
+              <p>Logitud: <span id="long"></span></p>
+          <hr>
+          <h3>To do...</h3>
+          <ul class="list-group">
+              <li class="list-group-item">
+                Funcionalidades<span class="badge">1</span>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <strike>Geolocalización</strike> <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                  </li>
+                  <li class="list-group-item">
+                      Solicitar grua <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                      Login <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                      ABM Usuario <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                      Descarga de documentacion <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                      Siniestros <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                    Telefonos Utiles   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                    Sucursales   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                    Cotizador   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                    Sucursales   <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                  <li class="list-group-item">
+                    Push notifications  <!-- <span class="badge"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span> -->
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                  Diseño <span class="badge">2</span>
+              </li>
+              <li class="list-group-item">
+                  Migrar a Angular <span class="badge">3</span>
+              </li>
+            </ul>
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well" type="button">              
+              <p>Auxilio</p>                
+              <button type="button" class="btn btn-warning">Solicitar grua!!!</button>
           </div>
-          <div class="col-sm-2 sidenav">
-            <div class="well" type="button">              
-                <p>Auxilio</p>                
-                <button type="button" class="btn btn-warning">Solicitar grua!!!</button>
-            </div>
-            <div class="well">
+          <div class="well">
+            <p>ADS</p>
+          </div>
+          <div class="well">
               <p>ADS</p>
             </div>
+        </div>
+        <div class="col-sm-2 sidenav">
             <div class="well">
                 <p>ADS</p>
               </div>
-          </div>
-          <div class="col-sm-2 sidenav">
               <div class="well">
                   <p>ADS</p>
                 </div>
                 <div class="well">
                     <p>ADS</p>
                   </div>
-                  <div class="well">
-                      <p>ADS</p>
-                    </div>
-          </div>
         </div>
       </div>
+      <div class="row content">          
+          <p>Cliente Extendido</p>
+          <p>
+            <span id="showCliente"></span>
+          </p>
+      </div>
+    </div>
       
-      <footer class="container-fluid text-center">
-        <p>POWERED by #JorgeGuli @2019</p>
-      </footer>
+
+    
+
+
+    <footer class="container-fluid text-center">
+      <p>POWERED by #JorgeGuli @2019</p>
+    </footer>
 
 
 

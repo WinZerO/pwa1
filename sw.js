@@ -5,7 +5,8 @@ urlsToCache = [
     './img/kali.png',
     './style/justified-nav.css',
     './style/bootstrap.css',
-    './scripts/script.js'
+    './scripts/script.js',
+    './login.html'
 ]
 
 self.addEventListener('install', e=>{
