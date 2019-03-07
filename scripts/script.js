@@ -12,8 +12,8 @@ function login(e) {
     var documento = document.getElementById("inputDocument");
     var contraseña = document.getElementById("inputPassword");
 
-    var urlClienteExtendido = 'https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarclienteextendido';
-    //var urlClienteExtendido = 'https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarclienteextendido?tipodoc=DNI&nrodoc=' + documento.value + '&fechahasta=01-01-2017';
+    //var urlClienteExtendido = 'https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarclienteextendido';
+    var urlClienteExtendido = 'https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarclienteextendido?tipodoc=DNI&nrodoc=' + documento.value + '&fechahasta=01-01-2017';
     // alert(urClienteExtendido);
     // fetch(urClienteExtendido)
     // .then(function(response) {
@@ -69,28 +69,44 @@ function login(e) {
     // })
 
 
-    var urlvariable;
+    // var urlvariable;
 
-    urlvariable = "text";
+    // urlvariable = "text";
 
-    var ItemJSON;
+    // var ItemJSON;
 
-    //?tipodoc=DNI&nrodoc=' + documento.value + '&fechahasta=01-01-2017
+    // //?tipodoc=DNI&nrodoc=' + documento.value + '&fechahasta=01-01-2017
 
-    ItemJSON = '[{"Id": 1,    "ProductID": "1",    "Quantity": 1,  }]';
+    // ItemJSON = '[{"tipodoc": DNI,    "nrodoc": "31431483",    "fechahasta": 01-01-2017  }]';
 
-    URL = urlClienteExtendido; // "https://testrestapi.com/additems?var=" + urlvariable;  //Your URL
-
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
-    xmlhttp.open("GET", URL, false);
-    xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
-    xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
-    xmlhttp.send(ItemJSON);
-    alert(xmlhttp.responseText);
-    document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+    // URL = urlClienteExtendido; // "https://testrestapi.com/additems?var=" + urlvariable;  //Your URL
+    // alert(URL);
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+    // xmlhttp.open("GET", URL, false);
+    // xmlhttp.setRequestHeader("Content-Type", "application/json");
+    // //xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+    // xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+    // // xmlhttp.send(ItemJSON);
     
+    // alert(xmlhttp.responseText);
+    // //document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+   
+    
+
+    let xmlHttp = new XMLHttpRequest();
+    xmlHttp.onload = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            console.log('XMLHttpRequest VALUE ', JSON.parse(xmlHttp.responseText));
+        }
+        else{
+            console.log('XMLHttpRequest ERROR ', xmlHttp.status + ': ' + xmlHttp.statusText);
+        }
+            
+    }
+    xmlHttp.open("GET",`https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente?fechahasta=01-01-2018&tipodoc=DNI&nrodoc=31431483`, true); // true for asynchronous 
+    xmlHttp.send(null);
+
 }
 
 
