@@ -19,17 +19,16 @@
     <body>
         <button onclick="myFunction()">Click me</button>
         <script>
-            async function myFunction() {
-                let response = await fetch('https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente?fechahasta=21-01-2018&tipodoc=DNI&nrodoc=31431483', {
+            function myFunction() {
+                let response = fetch('https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente?fechahasta=21-01-2018&tipodoc=DNI&nrodoc=31431483', {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json',
                         'Content-type': 'application/json'
                     },
-                    //credentials: 'include',
-                    //body: JSON.stringify(data)
+                    //credentials: 'include',                   
                 });
-                let result = await response.json();
+                let result = response.json();
                 alert(result);
                 //return result;
             }
