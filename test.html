@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="descripcion para la primer pwa / login">
+        <meta name="author" content="#JorgeGuli">
+        <meta name="generator" content="Jekyll v3.8.5">
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="descripcion para la primer pwa">
+        <meta name="author" content="#JorgeGuli">
+        <link rel="icon" href="./img/kali.png">
+
+        <title>Login</title>
+    </head>
+    <body>
+        <button onclick="myFunction()">Click me</button>
+        <script>
+            async function myFunction() {
+                let response = await fetch('https://ws-externos-uat.sancristobal.com.ar/WSB2B_CRM_REST_test/api/Personas/Buscarcliente?fechahasta=21-01-2018&tipodoc=DNI&nrodoc=31431483', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-type': 'application/json'
+                    },
+                    //credentials: 'include',
+                    //body: JSON.stringify(data)
+                });
+                let result = await response.json();
+                alert(result);
+                //return result;
+            }
+        </script>
+    </body>
+</html>
